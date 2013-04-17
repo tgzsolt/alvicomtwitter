@@ -1,0 +1,36 @@
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at Tue Apr 09 12:15:54 +0200 2013
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 2ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users" for 127.0.0.1 at Tue Apr 09 12:17:16 +0200 2013
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/users/index" for 127.0.0.1 at Tue Apr 09 12:17:48 +0200 2013
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"index"}
+Completed 500 Internal Server Error in 1ms
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/home/index" for 127.0.0.1 at Tue Apr 09 12:19:07 +0200 2013
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 4.2ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+Started GET "/home/index" for 127.0.0.1 at Tue Apr 09 12:19:22 +0200 2013
+Processing by HomeController#index as HTML
+  Rendered home/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 4ms (Views: 4.1ms | ActiveRecord: 0.0ms)
+  [1m[35m (0.0ms)[0m  rollback transaction

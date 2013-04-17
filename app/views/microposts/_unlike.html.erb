@@ -1,0 +1,1 @@
+<%= link_to "dislike", current_user.like_relationships.find_by_micropost_id(@micropost), method: :delete, remote: true %>

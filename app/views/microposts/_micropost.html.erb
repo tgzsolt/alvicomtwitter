@@ -1,0 +1,30 @@
+<li>
+  <span class="content"><%= micropost.content %></span>
+  <span class="timestamp">
+    Posted <%= time_ago_in_words(micropost.created_at) %> ago.
+  </span>
+  <div>
+      <% if signed_in? %>
+      <div id="like_form_<%= micropost.id %>" class="link">
+          <% if micropost.likeby?(current_user) %>
+           <%= link_to "dislike", current_user.like_relationships.find_by_micropost_id(micropost), method: :delete, remote: true %>
+          <% else %>
+            <%= link_to "like", likes_path(micropost_id: micropost.id), method: :post, remote: true %>
+          <% end %>
+      </div>
+      <% end %>
+      <% if current_user?(micropost.user) %>
+      <div id="delete_micropost_form_<%= micropost.id %>" class="link">
+        <%= link_to "delete", micropost, method: :delete,
+                                         data: { confirm: "You sure?" },
+                                         title: micropost.content %>
+      </div>                                   
+      <% end %>
+      <div class="lastlink"/>
+      <div id="user_avatars_<%= micropost.id %>" class="user_avatars">
+        <% micropost.likers.each do |user| %>
+          <%= link_to gravatar_for(user, size: 30), user %>
+        <% end %>
+      </div>
+    </div>
+</li>

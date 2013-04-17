@@ -1,0 +1,7 @@
+<%= yield %>
+<% if flash.now[:success] %>
+$.gritter.add({
+      title: ' ',
+      text: '<%= escape_javascript(flash.now[:success]) %>'
+    });
+    <% end %>
